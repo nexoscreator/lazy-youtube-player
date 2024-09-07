@@ -5,18 +5,21 @@
 
 ---
 
-# NexosYT - Lazy Loaded YouTube Player
+# NexosYT - Lazy YouTube Player
 
 ![image](.github/preview.png)
 
-NexosYT is a lightweight JavaScript library that enables lazy loading of YouTube videos on your website. It replaces video thumbnails with a play button, loading the video only when the thumbnail is clicked. This enhances page load times and user experience.
+Lazy YouTube Player is a lightweight, customizable YouTube player component with support for React, Vue, and Svelte. It provides a simple way to embed YouTube videos with lazy loading capabilities, improving your website's performance.
 
 ---
 
 ### Features
 
 - Lazy loading of YouTube videos
-- Customizable play button
+- Lazy loading of YouTube videos
+- Support for React, Vue, and Svelte
+- Customizable player options
+- TypeScript support
 - Smooth transitions and hover effects
 - Responsive design
 
@@ -74,3 +77,122 @@ Please check the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
 ### License
 
 This project is licensed under the [MIT License](LICENSE).
+
+
+
+
+
+
+
+
+
+## Installation
+
+Choose the package that corresponds to your framework:
+
+### React
+
+```bash
+npm install @lazy-youtube-player/react
+```
+
+### Vue
+
+```shellscript
+npm install @lazy-youtube-player/vue
+```
+
+### Svelte
+
+```shellscript
+npm install @lazy-youtube-player/svelte
+```
+
+## Usage
+
+### React
+
+```javascriptreact
+import { LazyYoutubePlayer } from '@lazy-youtube-player/react';
+
+function App() {
+  return (
+    <LazyYoutubePlayer
+      videoId="dQw4w9WgXcQ"
+      width={640}
+      height={360}
+      autoplay={false}
+    />
+  );
+}
+```
+
+### Vue
+
+```vue
+<template>
+  <LazyYoutubePlayer
+    video-id="dQw4w9WgXcQ"
+    :width="640"
+    :height="360"
+    :autoplay="false"
+  />
+</template>
+
+<script>
+import { LazyYoutubePlayer } from '@lazy-youtube-player/vue';
+
+export default {
+  components: {
+    LazyYoutubePlayer
+  }
+}
+</script>
+```
+
+### Svelte
+
+```svelte
+<script>
+  import { LazyYoutubePlayer } from '@lazy-youtube-player/svelte';
+</script>
+
+<LazyYoutubePlayer
+  videoId="dQw4w9WgXcQ"
+  width={640}
+  height={360}
+  autoplay={false}
+/>
+```
+
+## API
+
+The LazyYoutubePlayer component accepts the following props:
+
+- `videoId` (string, required): The YouTube video ID.
+- `width` (number, optional): The width of the player. Default: 640.
+- `height` (number, optional): The height of the player. Default: 360.
+- `autoplay` (boolean, optional): Whether to autoplay the video. Default: false.
+
+
+## Development
+
+This project uses Lerna to manage multiple packages. To get started with development:
+
+1. Clone the repository
+2. Install dependencies: `yarn install`
+3. Bootstrap the project: `yarn bootstrap`
+4. Build all packages: `yarn build`
+
+
+To run tests: `yarn test`
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+
+
