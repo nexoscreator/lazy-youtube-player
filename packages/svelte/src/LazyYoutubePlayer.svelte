@@ -1,21 +1,18 @@
-<script lang="ts">
-    import { onMount } from 'svelte';
-    import { LazyYoutubePlayerCore, type LazyYoutubePlayerOptions } from '@lazy-youtube-player/core';
-    import '@lazy-youtube-player/core/styles.css';
+<script>
+  import { onMount } from 'svelte';
+  import { LazyYoutubePlayer } from '../core/index.js';
 
-    export let videoId: string;
-    export let width: number = 640;
-    export let height: number = 360;
-    export let autoplay: boolean = false;
-    export let customClass: string = '';
+  export let videoId;
 
-    let playerId: string;
+  let ytContainer;
 
-    onMount(() => {
-        playerId = `youtube-player-${videoId}`;
-        const core = new LazyYoutubePlayerCore({ videoId, width, height, autoplay, customClass });
-        core.init(playerId);
-    });
+  onMount(() => {
+    if (ytContainer) {
+      new LazyYoutubePlayer(ytContainer, videoId);
+    }
+  });
 </script>
 
-<div id={playerId} class={customClass}></div>
+<div bind:this={ytContainer} class="NexosYt" data-embed={videoId}></div>
+
+<style src="../core/style.css"></style>

@@ -1,16 +1,17 @@
 import React, { useEffect, useRef } from 'react';
-import { LazyYoutubePlayerCore, LazyYoutubePlayerOptions } from '@lazy-youtube-player/core';
-import '@lazy-youtube-player/core/styles.css';
+import { LazyYoutubePlayer } from '@lazy-youtube-player/core/index.js';
+import '@lazy-youtube-player/core/style.css'; // Import core styles
 
-export const LazyYoutubePlayer: React.FC < LazyYoutubePlayerOptions > = (props) => {
-    const containerRef = useRef < HTMLDivElement > (null);
+const LazyYoutubePlayerComponent = ({ videoId }) => {
+  const ytRef = useRef(null);
 
-    useEffect(() => {
-        if (containerRef.current) {
-            const core = new LazyYoutubePlayerCore(props);
-            core.init(containerRef.current.id);
-        }
-    }, [props.videoId]);
+  useEffect(() => {
+    if (ytRef.current) {
+      new LazyYoutubePlayer(ytRef.current, videoId);
+    }
+  }, [videoId]);
 
-    return <div ref={containerRef} id={`youtube-player-${props.videoId}`} className={props.customClass} />;
+  return <div ref={ytRef} className="NexosYt" data-embed={videoId}></div>;
 };
+
+export default LazyYoutubePlayerComponent;

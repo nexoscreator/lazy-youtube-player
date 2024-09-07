@@ -1,32 +1,25 @@
 <template>
-    <div :id="`youtube-player-${videoId}`" :class="customClass"></div>
+  <div ref="ytContainer" class="NexosYt" :data-embed="videoId"></div>
 </template>
 
-<script lang="ts">
-    import { defineComponent, onMounted, watch } from 'vue';
-    import { LazyYoutubePlayerCore, LazyYoutubePlayerOptions } from '@lazy-youtube-player/core';
-    import '@lazy-youtube-player/core/styles.css';
+<script setup>
+import { ref, onMounted } from 'vue';
+import { LazyYoutubePlayer } from '../core/index.js';
 
-    export default defineComponent({
-        props: {
-            videoId: { type: String, required: true },
-            width: { type: Number, default: 640 },
-            height: { type: Number, default: 360 },
-            autoplay: { type: Boolean, default: false },
-            customClass: { type: String, default: '' },
-        },
-        setup(props: LazyYoutubePlayerOptions) {
-            let core: LazyYoutubePlayerCore;
+const props = defineProps({
+  videoId: {
+    type: String,
+    required: true
+  }
+});
 
-            const initPlayer = () => {
-                core = new LazyYoutubePlayerCore(props);
-                core.init(`youtube-player-${props.videoId}`);
-            };
+const ytContainer = ref(null);
 
-            onMounted(initPlayer);
-            watch(() => props.videoId, initPlayer);
-
-            return {};
-        },
-    });
+onMounted(() => {
+  if (ytContainer.value) {
+    new LazyYoutubePlayer(ytContainer.value, props.videoId);
+  }
+});
 </script>
+
+<style src="../core/style.css"></style>

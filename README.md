@@ -16,7 +16,6 @@ Lazy YouTube Player is a lightweight, customizable YouTube player component with
 ### Features
 
 - Lazy loading of YouTube videos
-- Lazy loading of YouTube videos
 - Support for React, Vue, and Svelte
 - Customizable player options
 - TypeScript support
@@ -34,59 +33,6 @@ Lazy YouTube Player is a lightweight, customizable YouTube player component with
 ---
 
 ### Installation
-
-To use NexosYT, include the following files in your project:
-
-1. HTML
-Add this HTML structure where you want to embed the YouTube player. Replace `YT_VIDEO_ID` with the actual YouTube video ID.
-
-  ```html
-  <div class="NexosYt" data-embed="YT_VIDEO_ID"></div>
-  ```
-
-2. CSS
-Add the following CSS to style the player and play button:
-
-  ```html
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nexoscreator/lazy-youtube-player@v0.0.1/yt-player.min.css">
-  ```
-
-3. JavaScript
-Include the following JavaScript to enable lazy loading of YouTube videos:
-
-  ```html
-  <script src="https://cdn.jsdelivr.net/gh/nexoscreator/lazy-youtube-player@v0.0.1/yt-player.min.js" defer></script>
-  ```
-
----
-
-### Contributing
-Contributions are welcome! If you have any suggestions, bug fixes, or improvements, feel free to open an issue or submit a pull request.
-If you'd like to contribute to this project, please follow these ste
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/improvement`).
-3. Make your changes and commit them (`git commit -m 'Add feature/improvement'`).
-4. Push to the branch (`git push origin feature/improvement`).
-5. Open a Pull Request.
-
-Please check the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
-
----
-
-### License
-
-This project is licensed under the [MIT License](LICENSE).
-
-
-
-
-
-
-
-
-
-## Installation
 
 Choose the package that corresponds to your framework:
 
@@ -108,45 +54,43 @@ npm install @lazy-youtube-player/vue
 npm install @lazy-youtube-player/svelte
 ```
 
+### Vanilla
+```html
+<script src="https://cdn.jsdelivr.net/gh/nexoscreator/lazy-youtube-player@v0.0.1/yt-player.min.js" defer></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nexoscreator/lazy-youtube-player@v0.0.1/yt-player.min.css">
+```
+
+---
+
 ## Usage
 
 ### React
 
 ```javascriptreact
-import { LazyYoutubePlayer } from '@lazy-youtube-player/react';
+import React from 'react';
+import LazyYoutubePlayerComponent from './components/LazyYoutubePlayerComponent';
 
 function App() {
   return (
-    <LazyYoutubePlayer
-      videoId="dQw4w9WgXcQ"
-      width={640}
-      height={360}
-      autoplay={false}
-    />
+    <div className="App">
+      <LazyYoutubePlayerComponent videoId="9FubrG9p3kc" />
+    </div>
   );
 }
+
+export default App;
 ```
 
-### Vue
+### Vue or Nuxt 3
 
 ```vue
 <template>
-  <LazyYoutubePlayer
-    video-id="dQw4w9WgXcQ"
-    :width="640"
-    :height="360"
-    :autoplay="false"
-  />
+  <LazyYoutubePlayer videoId="9FubrG9p3kc" />
 </template>
 
-<script>
-import { LazyYoutubePlayer } from '@lazy-youtube-player/vue';
-
-export default {
-  components: {
-    LazyYoutubePlayer
-  }
-}
+<script setup>
+import LazyYoutubePlayer from '~/components/LazyYoutubePlayer.vue';
 </script>
 ```
 
@@ -154,16 +98,18 @@ export default {
 
 ```svelte
 <script>
-  import { LazyYoutubePlayer } from '@lazy-youtube-player/svelte';
+  import LazyYoutubePlayer from './components/LazyYoutubePlayer.svelte';
 </script>
 
-<LazyYoutubePlayer
-  videoId="dQw4w9WgXcQ"
-  width={640}
-  height={360}
-  autoplay={false}
-/>
+<LazyYoutubePlayer videoId="9FubrG9p3kc" />
 ```
+
+### Vanilla
+  ```html
+  <div class="NexosYt" data-embed="YT_VIDEO_ID"></div>
+  ```
+
+---
 
 ## API
 
@@ -174,25 +120,22 @@ The LazyYoutubePlayer component accepts the following props:
 - `height` (number, optional): The height of the player. Default: 360.
 - `autoplay` (boolean, optional): Whether to autoplay the video. Default: false.
 
+---
 
-## Development
+### Contributing
+Contributions are welcome! If you have any suggestions, bug fixes, or improvements, feel free to open an issue or submit a pull request.
+If you'd like to contribute to this project, please follow these ste
 
-This project uses Lerna to manage multiple packages. To get started with development:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/improvement`).
+3. Make your changes and commit them (`git commit -m 'Add feature/improvement'`).
+4. Push to the branch (`git push origin feature/improvement`).
+5. Open a Pull Request.
 
-1. Clone the repository
-2. Install dependencies: `yarn install`
-3. Bootstrap the project: `yarn bootstrap`
-4. Build all packages: `yarn build`
+Please check the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
 
+---
 
-To run tests: `yarn test`
+### License
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License.
-
-
+This project is licensed under the [MIT License](LICENSE).
