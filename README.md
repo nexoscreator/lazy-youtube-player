@@ -5,7 +5,7 @@
 
 ---
 
-# NexosYT - Lazy YouTube Player 🎥
+# Lazy YouTube Player 🎥
 
 ![image](.github/preview.gif)
 
@@ -59,8 +59,8 @@ optional: `data-thumbnail="CUSTOM_THUMBNAIL_URL"`
 
 [![Web Demo](https://img.shields.io/badge/Web-Demo-blue?style=for-the-badge&logo=google-chrome)](https://nexoscreator.github.io/lazy-youtube-player)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-green?style=for-the-badge&logo=github)](https://github.com/nexoscreator/lazy-youtube-player)
-[![YouTube Video](https://img.shields.io/badge/YouTube-Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/rMnDe0iEGRs?si=L7UPOsBBW5Q)
-[![NPM Package](https://img.shields.io/badge/NPM-Package-orange?style=for-the-badge&logo=npm)]([https://www.npmjs.com/package/featurastic-ui-buttons](https://www.npmjs.com/package/lazy-youtube-player)) 
+[![YouTube Video](https://img.shields.io/badge/YouTube-Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/L7UPOsBBW5Q)
+[![NPM Package](https://img.shields.io/badge/NPM-Package-orange?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/lazy-youtube-player) 
 
 ---
 
@@ -78,9 +78,15 @@ The LazyYouTubePlayer component accepts the following props:
 
 ### Contributing 🤝
 
-Contributions are welcome! If you have any suggestions, bug fixes, or improvements, feel free to open an issue or submit a pull request.
+We love contributions! Here's how you can help:
 
-Please check the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
+1. 🍴 Fork the repository
+2. 🌿 Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. 💾 Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. 🚀 Push to the branch (`git push origin feature/AmazingFeature`)
+5. 🔃 Open a Pull Request
+
+Check out our [Contribution Guidelines](CONTRIBUTING.md) for more details.
 
 ---
 
@@ -90,10 +96,10 @@ This project is licensed under the MIT License - see the [License](LICENSE) file
 
 ---
 
-### Support 💖
+<p align="center">
+  Created with ❤️ by <a href="https://github.com/nexoscreator">@nexoscreator</a>
+</p>
 
-If you like this project, please consider giving it a ⭐ on [GitHub](https://github.com/nexoscreator/lazy-youtube-player) and sharing it with your friends!
-
----
-
-Created with ❤️ by [@nexoscreator](https://github.com/nexoscreator)
+<p align="center">
+  <a href="https://github.com/nexoscreator/lazy-youtube-player/stargazers">⭐ Star us on GitHub!</a>
+</p>
