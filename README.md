@@ -1,19 +1,19 @@
 ![GitHub Pages](https://img.shields.io/github/deployments/nexoscreator/lazy-youtube-player/github-pages.svg?style=flat-square&color=cyan)
 ![GitHub Release](https://img.shields.io/github/v/release/nexoscreator/lazy-youtube-player.svg?style=flat-square&color=cyan)
 ![GitHub License](https://img.shields.io/github/license/nexoscreator/lazy-youtube-player.svg?style=flat-square&color=cyan)
-![GitHub code size](https://img.shields.io/github/languages/code-size/nexoscreator/lazy-youtube-player.svg?style=flat-square&color=cyan)
+![GitHub Code](https://img.shields.io/github/languages/code-size/nexoscreator/lazy-youtube-player.svg?style=flat-square&color=cyan)
 
 ---
 
-# Lazy YouTube Player 🎥
+## 🎥 Lazy YouTube Player
 
 ![image](.github/preview.gif)
 
-Lazy YouTube Player is a lightweight, customizable YouTube player. It provides a simple way to embed YouTube videos with lazy loading capabilities, improving your website's performance.
+> Lazy YouTube Player is a lightweight, customizable YouTube player. It provides a simple way to embed YouTube videos with lazy loading capabilities, improving your website's performance.
 
 ---
 
-### Features ✨
+## ✨ Features
 
 - Lazy loading of YouTube videos using Intersection Observer API
 - TypeScript support for improved developer experience
@@ -24,14 +24,20 @@ Lazy YouTube Player is a lightweight, customizable YouTube player. It provides a
 
 ---
 
-### Installation 📦
+## 📥 Installation
 
+Follow these steps to set up **Lazy YouTube Player** on your machine.
+
+1. **Add the script to your HTML file:**
 ```html
 <script type='module'
   src="https://cdn.jsdelivr.net/npm/lazy-youtube-player@v0.3.0/yt-player.min.js"
   defer
 ></script>
+```
 
+2. **Add the stylesheet to your HTML file:**
+```html
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/lazy-youtube-player@v0.3.0/yt-player.min.css"
@@ -40,7 +46,7 @@ Lazy YouTube Player is a lightweight, customizable YouTube player. It provides a
 
 ---
 
-### Usage 🚀
+## 🎯 Usage
 
 Here's a basic example of how to use the Lazy YouTube Player in a website:
 
@@ -51,11 +57,11 @@ Here's a basic example of how to use the Lazy YouTube Player in a website:
 ></div>
 ```
 
-optional: `data-thumbnail="CUSTOM_THUMBNAIL_URL"`
+💡 _You can also customize thumbnail `data-thumbnail="CUSTOM_THUMBNAIL_URL"`, its optional._
 
 ---
 
-### Links 🔗
+## 🔗 Useful Links
 
 [![Web Demo](https://img.shields.io/badge/Web-Demo-blue?style=for-the-badge&logo=google-chrome)](https://nexoscreator.github.io/lazy-youtube-player)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-green?style=for-the-badge&logo=github)](https://github.com/nexoscreator/lazy-youtube-player)
@@ -64,7 +70,7 @@ optional: `data-thumbnail="CUSTOM_THUMBNAIL_URL"`
 
 ---
 
-## API
+## 🧠 API
 
 The LazyYouTubePlayer component accepts the following props:
 
@@ -76,25 +82,31 @@ The LazyYouTubePlayer component accepts the following props:
 
 ---
 
-### Contributing 🤝
+## 🤝 Contributing
 
-We love contributions! Here's how you can help:
+We ❤️ contributions! Follow these steps to contribute:
 
-1. 🍴 Fork the repository
-2. 🌿 Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. 💾 Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. 🚀 Push to the branch (`git push origin feature/AmazingFeature`)
-5. 🔃 Open a Pull Request
+1. 🍴 **Fork** the repository
+2. 🌿 **Create** a new branch (`git checkout -b feature/AmazingFeature`)
+3. 💾 **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
+4. 🚀 **Push** to the branch (`git push origin feature/AmazingFeature`)
+5. 🔃 **Open a Pull Request**
 
-Check out our [Contribution Guidelines](CONTRIBUTING.md) for more details.
+📖 _See our [Contribution Guidelines](CONTRIBUTING.md) for more details._
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-### License 📄
+## 📬 Contact & Community
 
-This project is licensed under the MIT License - see the [License](LICENSE) file for details.
-
----
+💬 Join us on **Discord**: [Click Here](https://discord.gg/H7pVc9aUK2)  
+🐦 **Follow on Twitter**: [@nexoscreator](https://twitter.com/nexoscreator)  
+📧 **Email**: [contact@nexoscreator.tech](mailto:contact@nexoscreator.tech)
 
 <p align="center">
   Created with ❤️ by <a href="https://github.com/nexoscreator">@nexoscreator</a>

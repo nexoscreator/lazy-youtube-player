@@ -1,6 +1,6 @@
 {
   "name": "lazy-youtube-player",
-  "version": "0.3.0",
+  "version": "0.3.8",
   "description": "A lightweight, customizable YouTube player component with lazy loading capabilities",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
